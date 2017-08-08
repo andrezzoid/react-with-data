@@ -1,0 +1,45 @@
+{
+  "name": "react-with-data",
+  "version": "0.0.0",
+  "description": "A React HOC for resolving promises and injecting them as props.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "eslint-loader": "^1.9.0",
+    "jest": "^20.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "standard": "^10.0.3",
+    "webpack": "^3.5.0"
+  },
+  "scripts": {
+    "build": "webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "release": "npm run standard && npm run test && npm run build && npm version patch && npm publish && git push --tags",
+    "standard": "standard",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "André Jonas",
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "standard",
+    "parser": "babel-eslint"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "/lib/"
+    ]
+  }
+}
